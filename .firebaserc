@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "leoportfolio"
+  },
+  "targets": {
+    "leoportfolio": {
+      "hosting": {
+        "LeoPortfolio": [
+          "leoportfolio"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,366 @@
+#ContactRoot, .ContactBackground {
+  width: 100%;
+  height: 100vh;
+}
+
+.ContactBackground {
+  background: rgba(154, 18, 179, 1);
+}
+
+#ContactRoot {
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+  z-index: =-10;
+}
+
+#ContactRoot:before {
+  z-index: =-10;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(circle 10vmax at var(--cursorX) var(--cursorY),
+      rgba(250, 250, 250, 0) 0%,
+      rgba(250, 250, 250, .5) 60%,
+      rgba(250, 250, 250, 1) 100%)
+}
+
+#ContactRoot .ContactHexagon {
+  background-image: url('~/assets/Home/Heaxagon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#ContactRoot .ContactContent {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow-y: scroll;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#ContactRoot .LeftContent {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#ContactRoot .RightContent {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+#ContactRoot .ContactMeSection {
+  height: 45%;
+  width: 100%;
+}
+
+#ContactRoot .OrSection {
+  font-family: 'Kaushan Script', cursive;
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+}
+
+#ContactRoot .OrEvenSection{
+  font-family: 'Kaushan Script';
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+  display: none;
+}
+
+#ContactRoot .PingMeSection {
+  height: 45%;
+  width: 100%;
+}
+
+#ContactRoot .contacts {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  position: relative;
+}
+
+#ContactRoot .contactMe {
+  width: 100%;
+  text-align: center;
+}
+
+#ContactRoot .ContactMeText {
+  font-family: 'Bungee Shade', cursive;
+  position: relative;
+  top: 20%;
+  font-size: 5vh;
+}
+
+#ContactRoot .phone, #ContactRoot .mail {
+  margin: 0 0% 3% 0%;
+}
+
+#ContactRoot .phone {
+  font-family: digital;
+  font-size: 4vh;
+  font-weight: bold;
+  color: black;
+}
+
+#ContactRoot .mail {
+  font-family: 'Metal Mania', cursive;
+  font-size: 4vh;
+}
+
+#ContactRoot .phone::before {
+  content: '';
+  background: url('~/assets/Contact/contact_call.svg') no-repeat center;
+  background-size: contain;
+  padding: 20px;
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+#ContactRoot .mail::before {
+  content: '';
+  background: url('~/assets/Contact/contact_mail.svg') no-repeat center;
+  background-size: contain;
+  padding: 20px;
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+}
+#ContactRoot a{
+  text-decoration: none;
+  color: black;
+}
+#ContactRoot .socialMedia {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 9%;
+}
+
+#ContactRoot .btn {
+  display: inline-block;
+  width: 75px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+
+#ContactRoot .btn i {
+  line-height: 80px;
+  font-size: 4vh;
+  transition: 0.2s linear;
+}
+
+#ContactRoot .btn:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+#ContactRoot .btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+#ContactRoot .btn:hover::before {
+  animation: socialHoverAni 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes socialHoverAni {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+#ContactRoot .pingMe {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+
+#ContactRoot .pingMeText {
+  font-family: 'Bungee Shade', cursive;
+  position: relative;
+  bottom: 20%;
+  font-size: 5vh;
+}
+
+#ContactRoot .pingContent {
+  font-family: 'Vibur', cursive;
+  font-size: 4vh;
+  width: 100%;
+  text-align: center;
+}
+
+#ContactRoot .pingMessage {
+  line-height: 50px;
+}
+
+
+#ContactRoot .sendButton {
+  cursor: pointer;
+  outline: none;
+  display: block;
+  border-radius: 20px;
+  border: 0;
+  width: 100px;
+  height: 35px;
+  font-size: 12px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #03cb91 0%, #00add8 100%);
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px green;
+}
+
+#ContactRoot .sendButton:active {
+  outline: 0;
+  box-shadow: none;
+}
+
+#ContactRoot .downloadTextContainer {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  position: relative;
+}
+
+#ContactRoot .downloadText {
+  font-family: 'Bungee Shade', cursive;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 5vh;
+  line-height: 6vh;
+}
+
+#ContactRoot .downloadSectionContainer {
+  width: 100%;
+  height: 50%;
+}
+
+#ContactRoot #name, #email, #discuss {
+  height: 47px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4vh;
+  background: none;
+  text-align: center;
+}
+
+#ContactRoot #email:focus, #name:focus {
+  border: none !important;
+   outline: none;
+}
+
+#ContactRoot #name {
+  width: 16vh;
+}
+#ContactRoot #email {
+  width: 22vh;
+}
+#ContactRoot #discuss {
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+
+#ContactRoot .ContactValidationFail{
+  border-radius: 10px;
+  border: 3px solid rgb(255 0 0);
+}
+
+#ContactRoot .ContactValidationDefault{
+    border: none;
+}
+
+#ContactRoot #snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  font-family: 'Dancing Script', cursive;
+}
+
+#ContactRoot #snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

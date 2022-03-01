@@ -1,0 +1,256 @@
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media
+only screen and (max-device-width: 1024px),
+only screen and (max-width: 1024px)
+and (orientation : landscape) {
+  #HomeRoot .textContainer .textContainerTop #HelloText {
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    width: 100%;
+    font-weight: 900;
+	top: 70%;
+    font-size: 6vw;
+  }
+
+  #HomeRoot .textContainer .textContainerBottom #WelcomeText, #WelcomeTextMobile1, #WelcomeTextMobile2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    position: relative;
+    -webkit-filter: drop-shadow(21px 21px 20px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(21px 21px 20px rgba(0, 0, 0, 0.2));
+    width: 100%;
+    top: 15%;
+	font-size: 6vw;
+  }
+
+  #HomeRoot .tabContainer .tab {
+    margin: 0% 16%;
+    width: 70%;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media
+only screen and (min-device-width: 320px) and (max-device-width: 768px),
+only screen and (min-width: 320px) and (max-width: 768px) {
+
+#HomeRoot  .HomeBackground {
+  	background: none;
+  }
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media
+only screen and (min-device-width: 426px) and (max-device-width: 767px),
+only screen and (min-width: 426px) and (max-width: 767px) {
+  #HomeRoot .textContainer .textContainerBottom #WelcomeText, #WelcomeTextMobile1, #WelcomeTextMobile2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    position: relative;
+    -webkit-filter: drop-shadow(21px 21px 20px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(21px 21px 20px rgba(0, 0, 0, 0.2));
+    width: 100%;
+    top: 15%;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media
+only screen and (min-device-width: 320px) and (max-device-width: 425px),
+only screen and (min-width: 320px) and (max-width: 425px)
+and (orientation : portrait) {
+  #HomeRoot .MobileFirstPageMainMobile {
+    background-image: url("~/assets/Home/Heaxagon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  #HomeRoot .MobFirst, .MobSecond, .MobThird, .MobFourth {
+    width: 100%;
+    height: 25%;
+  }
+
+  #HomeRoot .MobLaptopContainer {
+    float: left;
+    width: 10%;
+  }
+
+  #HomeRoot .MobNotpadContainer {
+    float: right;
+    width: 10%;
+  }
+
+  #HomeRoot .notepadPenContainer {
+    float: right;
+  }
+
+  #HomeRoot .laptopContainer #laptop {
+    width: 90%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+  }
+
+  #HomeRoot .notepadPenContainer #notepad {
+    position: relative;
+    top: 0px;
+  }
+
+  #HomeRoot .textContainer{
+    width:100%
+  }
+  #HomeRoot .textContainerTop, .textContainer .textContainerMIddle, .textContainer .textContainerBottom{
+    height:25%;
+  }
+
+	#HomeRoot .textContainer .textContainerMIddle{
+  height:50%;
+}
+
+
+
+  #HomeRoot .textContainer .textContainerTop #HelloText{
+    position: relative;
+    top:0px;
+  }
+
+  #HomeRoot .textContainer .textContainerBottom #WelcomeText, #WelcomeTextMobile1, #WelcomeTextMobile2 {
+    font-size: 8vw;
+    top: 50%;
+  }
+
+  #HomeRoot .textContainer .textContainerTop #HelloText {
+    font-size: 8vw;
+    top: 0px;
+  }
+
+  #HomeRoot .mobileContainer{
+    float: right;
+  }
+
+  #HomeRoot .tabContainer{
+    --tabBottom : -150px;
+    float: none;
+    width: 100%;
+  }
+
+  #HomeRoot .tabContainer .tab{
+    margin: 0% 20%;
+    bottom: var(--tabBottom);
+    width: 60%;
+  }
+
+  #scrollMore
+  {
+    top: 76%;
+    left: 45vmin;
+  }
+
+  .text{
+    animation-direction: reverse;
+  }
+
+  .mouse, .mouse::before{
+    width: 100%;
+    height: 0px;
+  }
+
+  .mouse::after{
+    background-color: #000000;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    animation-direction: reverse;
+  }
+
+  @keyframes trackBallSlide{
+    0%{
+      opacity: 1;
+      transform: scale(1) translateY(-6vmin);
+    }
+    6%{
+      opacity: 1;
+      transform: scale(0.9) translateY(1vmin);
+    }
+    14%{
+      opacity: 0;
+      transform: scale(0.4) translateY(6vmin);
+    }
+    15%, 19%{
+      opacity: 0;
+      transform: scale(0.4) translateY(-6vmin);
+    }
+    28%, 29.99%{
+      opacity: 1;
+      transform: scale(1) translateY(-6vmin);
+    }
+    30%{
+      opacity: 1;
+      transform: scale(1) translateY(-6vmin);
+    }
+    36%{
+      opacity: 1;
+      transform: scale(0.9) translateY(1vmin);
+    }
+    44%{
+      opacity: 0;
+      transform: scale(0.4) translateY(6vmin);
+    }
+    45%, 49%{
+      opacity: 0;
+      transform: scale(0.4) translateY(-6vmin);
+    }
+    58%, 59.99%{
+      opacity: 1;
+      transform: scale(1) translateY(-6vmin);
+    }
+    60%{
+      opacity: 1;
+      transform: scale(0.9) translateY(-6vmin);
+    }
+    66%{
+      opacity: 1;
+      transform: scale(0.9) translateY(1vmin);
+    }
+    74%{
+      opacity: 0;
+      transform: scale(0.4) translateY(6vmin);
+    }
+    75%, 79%{
+      opacity: 0;
+      transform: scale(0.4) translateY(-6vmin);
+    }
+    88%, 100%{
+      opacity: 1;
+      transform: scale(1) translateY(-6vmin);
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+<div id="navID">
+  <div class="container" (click)="expand(menuOpen)">
+    <div class="toggle" id="toggle">
+      <div class="hamburger">
+        <div class="hamburgerButton"></div>
+      </div>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <div class="item" (click)="navigate(NavPages[2])">
+        <span class="{{NavPages[2]}}"></span>
+    </div>
+    <div class="item" (click)="navigate(NavPages[1])">
+        <span class="{{NavPages[1]}}"></span>
+    </div>
+    <div class="item" (click)="navigate(NavPages[0])">
+        <span class="{{NavPages[0]}}"></span>
+    </div>
+  </div>
+</div>

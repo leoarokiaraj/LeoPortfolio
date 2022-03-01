@@ -1,0 +1,181 @@
+#navID {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+#navID .container, .menu {
+  height: 8vmin;
+  width: 15.5vmin;
+  position: absolute;
+  margin: 0 auto;
+  top: -5.9vmin;
+  bottom: 0;
+  left: 45%;
+  cursor: pointer;
+}
+
+#navID .menu {
+  z-index: -1;
+  transform: scale(0.9);
+}
+
+#navID .toggle {
+  height: 0;
+  width: 6.5vmin;
+  border-bottom: 6vmin solid #494d4e;
+  border-left: 4.5vmin solid transparent;
+  border-right: 4.5vmin solid transparent;
+  position: absolute;
+  top: 0;
+}
+
+#navID .toggle:before {
+  content: '';
+  height: 0;
+  width: 6.5vmin;
+  border-top: 6vmin solid #494d4e;
+  border-left: 4.5vmin solid transparent;
+  border-right: 4.5vmin solid transparent;
+  position: absolute;
+  top: 6vmin;
+  left: -4.5vmin;
+}
+
+#navID #add {
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  top: 2.7vmin;
+  right: 0.7vmin;
+  transition: .4s;
+}
+
+#navID .item {
+  height: 0;
+  width: 6.5vmin;
+  border-bottom: 6vmin solid #494d4e;
+  border-left: 4.5vmin solid transparent;
+  border-right: 4.5vmin solid transparent;
+  position: absolute;
+  top: 0;
+  transition: .5s;
+}
+
+#navID .item:before {
+  content: '';
+  height: 0;
+  width: 6.5vmin;
+  border-top: 6vmin solid #494d4e;
+  border-left: 4.5vmin solid transparent;
+  border-right: 4.5vmin solid transparent;
+  position: absolute;
+  top: 5.9vmin;
+  left: -4.5vmin;
+}
+
+#navID span {
+  position: relative;
+  top: 2.7vmin;
+}
+
+.home {
+  background-image: url('~/assets/Navigation/Home.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 6vmin;
+  bottom: .5vmin;
+  display: block;
+}
+
+.aboutme {
+  background-image: url('~/assets/Navigation/About.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 6vmin;
+  bottom: .5vmin;
+  display: block;
+}
+
+.timeline {
+  background-image: url('~/assets/Navigation/Timeline.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 6vmin;
+  bottom: .5vmin;
+  display: block;
+}
+
+.contact {
+  background-image: url('~/assets/Navigation/Contact.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  right: .5vmin;
+  top: 0px;
+  height: 5.5vmin;
+  bottom: .5vmin;
+  display: block;
+}
+
+/* HAMBURGER */
+.hamburger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vmin;
+  height: 4vmin;
+  cursor: pointer;
+  top: 6.6vmin;
+  left: 0.8vmin;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.hamburgerButton {
+  width: 5vmin;
+  height: .6vmin;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.hamburgerButton::before,
+.hamburgerButton::after {
+  content: '';
+  position: absolute;
+  width: 5vmin;
+  height: .6vmin;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.hamburgerButton::before {
+  transform: translateY(-1.2vmin);
+}
+
+.hamburgerButton::after {
+  transform: translateY(1.2vmin);
+}
+
+/* ANIMATION */
+.hamburger.open .hamburgerButton {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.hamburger.open .hamburgerButton::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger.open .hamburgerButton::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}

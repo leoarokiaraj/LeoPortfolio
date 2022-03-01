@@ -1,0 +1,73 @@
+html {
+  overflow: hidden;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  position: fixed;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin: 0px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+body::after
+{
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+  content:  url('~/assets/Home/Heaxagon.svg')
+            url('~/assets/Home/Laptop.svg')
+            url('~/assets/Home/Mobile.svg')
+            url('~/assets/Home/Notepad.svg')
+            url('~/assets/Home/Pens.svg')
+            url('~/assets/Home/Glasses.svg')
+            url('~/assets/Navigation/Contact.svg')
+            url('~/assets/TimeLine/TimeLineBackground.jpg')
+            url('~/assets/Contact/contact_call.svg')
+            url('~/assets/Contact/contact_mail.svg')
+            url('~/assets/AboutMe/MyPicLS.jpg')
+            url('~/assets/TimeLine/TimeLineImage2.jpg')
+            url('~/assets/TimeLine/TimeLineImage3.png')
+            url('~/assets/TimeLine/TimeLineImage4.png')
+            url('~/assets/TimeLine/TimeLineImage5.jpg')
+            url('~/assets/TimeLine/TimeLineDecor.svg');;
+}
+
+@font-face {
+  font-family: Bungee Shade;
+   src: local(Bungee Shade), url('/assets/Font/BungeeShade/BungeeShade-Regular.woff');
+}
+@font-face {
+  font-family: Metal Mania;
+   src: local(Metal Mania), url('/assets/Font/MetalMania/MetalMania-Regular.woff');
+}
+@font-face {
+  font-family: Kaushan Script;
+   src: local(Kaushan Script), url('/assets/Font/KaushanScript/KaushanScript-Regular.ttf');
+}
+@font-face {
+  font-family: Vibur;
+   src: local(Vibur), url('/assets/Font/Vibur/Vibur-Regular.ttf');
+ }
+@font-face {
+  font-family: digital;
+   src: local(digital), url('/assets/Font/digital/digital.ttf');
+}
+@font-face {
+  font-family: KnightsQuest;
+   src: local(KnightsQuest), url('/assets/Font/KnightsQuest/KnightsQuest.ttf');
+}
+@font-face {
+  font-family: Merienda;
+   src: local(Merienda), url('/assets/Font/Merienda/Merienda-Regular.ttf');
+}
+@font-face {
+  font-family: Dancing Script;
+   src: local(Dancing Script), url('/assets/Font/DancingScript/DancingScript-Regular.ttf');
+}
