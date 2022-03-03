@@ -9,12 +9,10 @@
 
 #ContactRoot {
   --cursorX: 50vw;
-  --cursorY: 50vh;
-  z-index: =-10;
+  --cursorY: 50vh;  
 }
 
 #ContactRoot:before {
-  z-index: =-10;
   content: '';
   display: block;
   width: 100%;

@@ -56,14 +56,15 @@ export class TimeLineComponent implements OnInit {
           }
         }
         this.ScrollCount--;
-
+        this.ScrollSwipeEvent();
       }
       //Scroll Down
       if (event.wheelDelta < 0) {
         if (this.ArticleCount > this.MinArticleCount) { this.ArticleCount--; }
         if (this.ScrollCount < this.MaxScrollCount) { this.ScrollCount++; }
+        this.ScrollSwipeEvent();
       }
-      this.ScrollSwipeEvent();
+      
     }
   }
 
@@ -143,6 +144,9 @@ export class TimeLineComponent implements OnInit {
       this.ScrollSwipeEvent();
     }
 
+    if (this.ScrollCount >= 1)
+      this.hideSnackBar()
+
   }
 
   @HostListener('window:resize', ['$event']) onResize(event: any) {
@@ -153,17 +157,28 @@ export class TimeLineComponent implements OnInit {
     location.reload();
 }
 
+@HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+
+      if(event.key === "ArrowDown")
+      {
+        this.doSwipeDown(event)
+      }
+
+      else if(event.key === "ArrowUp")
+      {
+        this.doSwipeUp()
+      }
+  }
+
 ScrollSwipeEvent() {
 
   let articleDOM = document.querySelector("#articles").children[0];
 
   if(this.ScrollCount >= 6)
   {
-    let timer = 0;
-    if(timer == 0) {
       for (let index = 1; index <= 6; index++) {
-
-        let timer = window.setTimeout(()=>{
+        window.setTimeout(()=>{
       
           if (this.ScrollCount == 6) {
             articleDOM.children[0].querySelector('#topID').classList.remove('openEnvelope');
@@ -216,7 +231,6 @@ ScrollSwipeEvent() {
     
         },500 * index)
         
-      }
     }
     
   }
@@ -253,7 +267,22 @@ ScrollSwipeEvent() {
       document.querySelector<HTMLElement>('#BirthAlign').style.paddingLeft = birthPaddingLeft + 'px';
       let envelopePaddingLeft = ((activeWidth - envelopeContentWidth) / 2);
       document.querySelector<HTMLElement>('#EnvelopeAlign').style.paddingLeft = envelopePaddingLeft + 'px';
+      this.showSnackBar()
     }
   }
 
+
+  showSnackBar() {
+    setTimeout( this.hideSnackBar, 5000);
+
+  }
+
+  hideSnackBar()
+  {
+    var divD = document.querySelector<HTMLElement>("#snackbarDown");
+    var divU = document.querySelector<HTMLElement>("#snackbarUp");
+    divD.style.transform = "translateY(250%)";
+    divU.style.transform = "translateY(250%)";
+    
+  }
 }
