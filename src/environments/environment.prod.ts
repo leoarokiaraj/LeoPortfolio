@@ -10,5 +10,6 @@ export const environment = {
     appId: "Refer App Secret",
     measurementId: "G-GDRHQZVJY4"
   },
-  APIBASEUR: "https://leoportfolio-api.herokuapp.com/"
+  APIBASEUR: "https://leoportfolio-api.herokuapp.com/",
+  DownloadFileName:"Leo-Resume.pdf"
 };

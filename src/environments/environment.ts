@@ -14,7 +14,8 @@ export const environment = {
     appId: "Refer App Secret",
     measurementId: "G-GDRHQZVJY4"
   },
-  APIBASEUR: "http://localhost:3000/"
+  APIBASEUR: "http://localhost:3000/",
+  DownloadFileName:"Leo-Resume.pdf"
 };
 
 /*

@@ -4,6 +4,7 @@ import { ViewEncapsulation } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FirebaseService } from '../Service/firebase.service';
 import { DatePipe } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -34,7 +35,8 @@ export class ContactComponent implements OnInit {
   }
 
   DownloadResume() {
-    this.fbStorageRef.child('Prasanth_Software_Engineer.pdf').getDownloadURL().then(function(url) {
+    console.log(environment.DownloadFileName)
+    this.fbStorageRef.child(environment.DownloadFileName).getDownloadURL().then(function(url) {
       var xhr = new XMLHttpRequest();
       xhr.responseType = 'blob';
       xhr.onload = function(event) {
@@ -43,7 +45,7 @@ export class ContactComponent implements OnInit {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = blobURL;
-        a.download = 'Prasanth_Software_Engineer.pdf';
+        a.download = environment.DownloadFileName;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
