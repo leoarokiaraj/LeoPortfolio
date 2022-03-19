@@ -611,6 +611,7 @@ article section:nth-last-child(3) {
   right: 75%;
   bottom: 3%;
   transition: 1s;
+  transform: translateY(250%);
   font-family: Merienda;
 }
 
@@ -630,5 +631,6 @@ article section:nth-last-child(3) {
   left: 73%;
   bottom: 3%;
   transition: 1s;
+  transform: translateY(250%);
   font-family: Merienda;
 }

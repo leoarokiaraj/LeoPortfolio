@@ -273,6 +273,10 @@ ScrollSwipeEvent() {
 
 
   showSnackBar() {
+    var divD = document.querySelector<HTMLElement>("#snackbarDown");
+    var divU = document.querySelector<HTMLElement>("#snackbarUp");
+    divD.style.transform = "translateY(0%)";
+    divU.style.transform = "translateY(0%)";
     setTimeout( this.hideSnackBar, 5000);
 
   }
