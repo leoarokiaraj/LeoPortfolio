@@ -385,6 +385,16 @@ article section:nth-last-child(3) {
   position: relative;
 }
 
+.office3ContentBG {
+  background-image: url('~/assets/TimeLine/TimeLineImage6.jpg');
+  background-color: #eeefff;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
 .tt-arrow-right {
   position: absolute;
   right: 25%;

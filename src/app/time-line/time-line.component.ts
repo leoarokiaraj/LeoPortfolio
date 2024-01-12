@@ -13,9 +13,9 @@ import { debounce } from './debounce';
 })
 export class TimeLineComponent implements OnInit {
 
-  MaxAtricleCount: any = 6;
+  MaxAtricleCount: any = 7;
   MinArticleCount: any = 0;
-  ArticleCount: any = 6;
+  ArticleCount: any = 7;
   ScrollCount: any = 0;
   MaxScrollCount: any = 11;
   mobile: boolean = false;
@@ -49,7 +49,7 @@ export class TimeLineComponent implements OnInit {
 
       //Scroll UP
       if (event.wheelDelta > 0) {
-        if (this.ScrollCount <= (this.MaxScrollCount - 5)) {
+        if (this.ScrollCount <= (this.MaxScrollCount - 6)) {
           if (this.ArticleCount < this.MaxAtricleCount) { this.ArticleCount++; }
           else {
             this.router.navigate(['aboutme']);
@@ -123,7 +123,7 @@ export class TimeLineComponent implements OnInit {
       }
     }
     else if (!this.mobile) {
-      if (this.ScrollCount <= (this.MaxScrollCount - 5)) {
+      if (this.ScrollCount <= (this.MaxScrollCount - 6)) {
         if (this.ArticleCount < this.MaxAtricleCount) { this.ArticleCount++; }
         else {
           this.router.navigate(['aboutme']);
@@ -175,33 +175,33 @@ ScrollSwipeEvent() {
 
   let articleDOM = document.querySelector("#articles").children[0];
 
-  if(this.ScrollCount >= 6)
+  if(this.ScrollCount >= 7)
   {
-      for (let index = 1; index <= 6; index++) {
+      for (let index = 1; index <= 7; index++) {
         window.setTimeout(()=>{
       
-          if (this.ScrollCount == 6) {
+          if (this.ScrollCount == 7) {
             articleDOM.children[0].querySelector('#topID').classList.remove('openEnvelope');
             articleDOM.children[0].querySelector<HTMLInputElement>('#topID').style.zIndex = '20';
           }
-          else if (this.ScrollCount == 7) {
+          else if (this.ScrollCount == 8) {
             articleDOM.children[0].querySelector('#topID').classList.add('openEnvelope');
             articleDOM.children[0].querySelector('#topID').classList.remove('openEnvelopeImportant');
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.top = "0px";
           }
-          else if (this.ScrollCount == 8) {
+          else if (this.ScrollCount == 9) {
             articleDOM.children[0].querySelector('#topID').classList.add('openEnvelopeImportant');
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.top = "-60px";
             articleDOM.children[0].querySelector<HTMLInputElement>('#topID').style.zIndex = '0';
           }
-          else if (this.ScrollCount == 9) {
+          else if (this.ScrollCount == 10) {
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.top = "-266px";
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.transform = "scale(1)";
             articleDOM.children[0].querySelector('.envelope .bottom').removeAttribute('style')
             articleDOM.children[0].querySelector('.envelope .left').removeAttribute('style')
             articleDOM.children[0].querySelector('.envelope .right').removeAttribute('style')
           }
-          else if (this.ScrollCount == 10) {
+          else if (this.ScrollCount == 11) {
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.transform = "scale(3)";
             articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.top = "-60px";
         
@@ -209,8 +209,8 @@ ScrollSwipeEvent() {
             articleDOM.children[0].querySelector<HTMLInputElement>('.envelope .left').style.zIndex = '0';
             articleDOM.children[0].querySelector<HTMLInputElement>('.envelope .right').style.zIndex = '0';
           }
-          else if (this.ScrollCount == 11) {
-            articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.transform = "scale(6)";
+          else if (this.ScrollCount == 12) {
+            articleDOM.children[0].querySelector<HTMLInputElement>('#paperID').style.transform = "scale(7)";
             this.router.navigate(['contact']);
           }
     

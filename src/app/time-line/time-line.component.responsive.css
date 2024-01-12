@@ -279,6 +279,16 @@
     position: relative;
   }
 
+  .office3ContentBGM {
+    background-image: url('~/assets/TimeLine/TimeLineImage6.jpg');
+    background-color: #eeefff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.9);
+    position: relative;
+  }
+
   .articleTimeLine {
     overflow-x: hidden;
     overflow-y: scroll;
